@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;600;700;900&display=swap');
+
+/* CSS kustom untuk benar-benar menghapus box shadow atau border */
+.react-tel-input .form-control {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+}
+.react-tel-input .flag-dropdown {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
