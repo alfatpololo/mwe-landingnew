@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="bg-secondary-dark-blue">
-        <div className="container mx-auto pt-[72px] pb-[56px]">
-          <div className="grid grid-cols-3 gap-[32px]">
+        <div className="container mx-auto pt-[72px] lg:pb-[56px] pb-[32px]">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-[32px] lg:px-0 px-[24px]">
             <div>
             <Image
                     className="mb-[24px]"
@@ -15,12 +15,12 @@ export default function Footer() {
                     alt=""
                   />
               <h4 className="text-white text-[32px] font-notosans font-[600] leading-[56px]">Boost Your Business Now!</h4>
-              <p className="text-white font-[400] mt-[180px]">
+              <p className="text-white font-[400] mt-[180px] hidden lg:block">
               © Copyright MakeWebEasy. All rights reserved.
               </p>
             </div>
             <div>
-              <h4 className="text-white text-[20px] font-notosans font-[500]">Indonesia</h4>
+              <h4 className="text-white text-[20px] font-notosans font-[500] mt-[32px] lg:mt-0">Indonesia</h4>
               <p className="text-white font-[400] mt-[16px]">
               GoWork, Central Park, Letjen S.Parman <br />
               Level LG, Unit L109-114, Kec. Grogol <br />
@@ -65,7 +65,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-            <h4 className="text-white text-[20px] font-notosans font-[500]">Thailand</h4>
+            <h4 className="text-white text-[20px] font-notosans font-[500] mt-[32px] lg:mt-0">Thailand</h4>
               <p className="text-white font-[400] mt-[16px]">
               128 / 323 30th FI. Phayathai Plaza, <br />
               Thung Phayathai, Ratchathewi, Bangkok<br />
@@ -98,6 +98,9 @@ export default function Footer() {
                     alt=""
                   /></span>MakeWebEasy</li>
               </ul>
+              <p className="text-white font-[400] mt-[32px] lg:hidden block">
+              © Copyright MakeWebEasy. All rights reserved.
+              </p>
             </div>
           </div>
         </div>

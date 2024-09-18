@@ -15,7 +15,7 @@ const CompanySizeTag: React.FC<CompanySizeTagProps> = ({
     <button
       onClick={onSelect}
       className={`px-4 py-2 rounded-full border ${
-        selected ? "bg-primary-blue text-white" : "bg-white text-primary-blue"
+        selected ? "bg-primary-blue text-white text-[14px] lg:text-[16px]" : "bg-white text-primary-blue text-[14px] lg:text-[16px]"
       } border-primary-blue transition`}
     >
       {label}
@@ -43,7 +43,7 @@ const CompanySizeSelector: React.FC<CompanySizeSelectorProps> = ({
   };
 
   return (
-    <div className="flex flex-wrap gap-[16px]">
+    <div className="flex flex-wrap gap-[12px]">
       {options.map((option) => (
         <CompanySizeTag
           key={option}

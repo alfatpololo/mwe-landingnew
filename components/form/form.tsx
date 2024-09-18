@@ -69,8 +69,8 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="pb-[175px]">
-      <div className="flex space-x-[32px] pt-[72px]">
-        <div className="flex-1">
+      <div className="lg:flex lg:space-x-[32px] pt-[72px]">
+        <div className="lg:flex-1">
           <input
             type="text"
             placeholder="Nama"
@@ -81,7 +81,7 @@ export default function ContactForm() {
             <p className="text-red-500 text-sm">{errors.name.message}</p>
           )}
         </div>
-        <div className="flex-1">
+        <div className="lg:flex-1 lg:pt-0 pt-[20px]">
           <input
             type="email"
             placeholder="Email"
@@ -94,8 +94,8 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="flex space-x-[32px] pt-[40px]">
-        <div className="flex-1 pt-[5px]">
+      <div className="lg:flex lg:space-x-[32px] pt-[20px] lg:pt-[40px]">
+        <div className="lg:flex-1 lg:pt-[5px]">
           <CustomPhoneInput
             value={phone}
             onChange={(value) => {
@@ -107,7 +107,7 @@ export default function ContactForm() {
             <p className="text-red-500 text-sm">{errors.phone.message}</p>
           )}
         </div>
-        <div className="flex-1">
+        <div className="lg:flex-1 lg:pt-0 pt-[20px]">
           <input
             type="text"
             placeholder="Jenis Bisnis Anda"
@@ -126,7 +126,7 @@ export default function ContactForm() {
         <textarea
           placeholder="Kebutuhan Website Anda"
           {...register("websiteNeeds")}
-          className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none p-2 h-32 pt-[40px]"
+          className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none p-2 lg:h-32 pt-[40px]"
         ></textarea>
         {errors.websiteNeeds && (
           <p className="text-red-500 text-sm">{errors.websiteNeeds.message}</p>

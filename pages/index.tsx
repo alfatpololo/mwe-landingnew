@@ -14,6 +14,7 @@ import CompanySizeSelector from "@/components/tags/companysizetags";
 import ContactForm from "@/components/form/form";
 import Footer from "@/components/footer/footer";
 import Features from "@/components/tabs/features";
+import PortfolioSlider from "@/components/slider/portfolioslider";
 
 export default function Home() {
   const [selectedCompanySize, setSelectedCompanySize] = useState<string | null>(
@@ -21,12 +22,11 @@ export default function Home() {
   );
 
   const companySizes = [
-    "1-10 Employees",
-    "11-50 Employees",
-    "51-200 Employees",
-    "201-500 Employees",
-    "501-1000 Employees",
-    "1001+ Employees",
+    "5-11 Karyawan",
+    "11-29 Karyawan",
+    "20-50 Karyawan",
+    "50-100 Karyawan",
+    "100 lebih Karyawan",
   ];
 
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -172,8 +172,8 @@ export default function Home() {
     <section id="sectiontwo">
     <div className="container mx-auto justify-center px-[80] pt-[182px]">
       <div className="lg:grid lg:grid-cols-3 lg:gap-[24px] mb-[28px]">
-        <div className="lg:w-[456px] px-[24px] lg:px-0">
-            <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[52px]">Dilengkapi Semua Fitur yang Dibutuhkan Pada Website</h2>
+        <div className="lg:w-[456px] px-[35px] lg:px-0">
+            <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[36px] lg:leading-[52px]">Dilengkapi Semua Fitur yang Dibutuhkan Pada Website</h2>
             <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px] hidden lg:flex">Buat Website E-Commerce dan Company Profilemu dengan Lebih Mudah bersama Berbagai Fitur Unggulan </p>
         </div>
         <div className="bg-gray-200 p-4 invisible"></div>
@@ -340,7 +340,8 @@ export default function Home() {
             <h2 className="text-secondary-black text-center text-[32px] font-notosans font-[600] leading-[52px]">Kami Telah Membantu Transformasi Digital <br /> Melalui Website Untuk Banyak Perusahaan!</h2>
             </div>
       </div>
-      <div className="grid grid-cols-3 gap-[24px] mb-[24px]">       
+      <PortfolioSlider />
+      <div className="lg:grid grid-cols-3 gap-[24px] mb-[24px] hidden">       
         <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px]">
           <div className="flex gap-[16px] space-x-3">
               <div className="w-full">
@@ -365,7 +366,7 @@ export default function Home() {
               </div>
           </div>
         </div>
-        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px]">
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] hidden lg:flex">
           <div className="flex gap-[16px]">
               <div className="w-full">
               <Image
@@ -389,7 +390,7 @@ export default function Home() {
               </div>
           </div>
         </div>
-        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] ">
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] hidden lg:flex">
           <div className="flex gap-[16px]">
               <div className="w-full">
               <Image
@@ -414,7 +415,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-[24px]">       
+      <div className="lg:grid grid-cols-3 gap-[24px] hidden">       
         <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] ">
           <div className="flex gap-[16px]">
               <div className="w-full">
@@ -488,53 +489,59 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
     </div>
     </section>
 
-    {/* <section id="sectionthree">
-    <div className="container mx-auto justify-center px-[80] py-[182px]">
+    <section id="sectionthree">
+    <div className="container mx-auto justify-center px-[80] lg:py-[182px]">
       <div className="grid grid-cols-1 gap-[24px] mb-[40px]">
         <div className="w-full">
             <h2 className="text-secondary-black text-center text-[32px] font-notosans font-[600] leading-[52px]">Kisah Sukses Mereka Bersama Kami</h2>
             </div>
       </div>
-      <div className="grid grid-cols-2 w-full gap-[32px] mb-[24px]">       
+      <div className="lg:grid lg:grid-cols-2 lg:w-full lg:gap-[32px] mb-[24px]">       
         <div className="">
-        <div className="">
-        <iframe className="rounded-[16px]" width="624" height="400" src="https://www.youtube.com/embed/6WeFmf41x2w" title="MakeWebEasy Indonesia Testimonial from Jeremy Rusli (Eaton Indonesia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <div className="hidden lg:block">
+        <iframe className="rounded-[12px]" width="624" height="400" src="https://www.youtube.com/embed/6WeFmf41x2w" title="MakeWebEasy Indonesia Testimonial from Jeremy Rusli (Eaton Indonesia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+</div>
+        <div className="flex justify-center px-[24px] lg:hidden">
+        <iframe className="rounded-[12px]" width="624" height="300" src="https://www.youtube.com/embed/6WeFmf41x2w" title="MakeWebEasy Indonesia Testimonial from Jeremy Rusli (Eaton Indonesia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
         </div>
         <div className="">
-        <div className="grid gap-[16px]">
-        <div className="">
+        <div className="lg:grid lg:gap-[16px]">
+        <div className="lg:mt-0 mt-[16px] px-[24px]">
       <DropdownButton />
     </div>
     </div>
         </div>
       </div>
     </div>
-    </section> */}
+    </section>
 
-    {/* <section className="bg-bg-client bg-auto h-[800px] bg-no-repeat bg-left-bottom" id="sectionfour">
-    <div className="container mx-auto justify-center px-[80] pt-[52px]">
-      <div className="grid grid-cols-2 gap-[24px] mb-[28px]">
-        <div className="w-[456px]">
-            <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Telah Dipercaya Oleh <br /> Lebih dari 5000+ Bisnis</h2>
+    <section className="lg:bg-bg-client lg:bg-auto lg:h-[800px] lg:bg-no-repeat lg:pt-0 pt-[125px] lg:bg-left-bottom" id="sectionfour">
+    <div className="container mx-auto justify-center px-[80] lg:pt-[52px]">
+      <div className="lg:grid lg:grid-cols-2 gap-[24px] mb-[28px]">
+        <div className="lg:w-[456px] lg:px-0 px-[24px]">
+            <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[52px]">Telah Dipercaya Oleh Lebih dari 5000+ Bisnis</h2>
         </div>
+        <div className="px-[24px] lg:px-0 mt-[32px]">
         <ScrollingImages />
+        </div>
       </div>
     </div>
-    </section> */}
+    </section>
 
-    {/* <section className="pt-[175px]" id="sectionfour">
-    <div className="container mx-auto justify-center px-[80] pt-[52px]">
+    <section className="lg:pt-[175px] pt-[125px]" id="sectionfour">
+    <div className="container mx-auto justify-center lg:px-[80] lg:pt-[52px]">
       <div className="flex mb-[56px]">
-        <div className="w-full">
-            <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Hubungi MakeWebEasy Untuk Konsultasi Selengkapnya!</h2>
+        <div className="lg:w-full lg:px-0 px-[24px]">
+            <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[52px]">Hubungi MakeWebEasy Untuk Konsultasi Selengkapnya!</h2>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-[32px]">
-      <div className="flex flex-col">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-[32px] lg:px-0 px-[24px]">
+      <div className="lg:flex lg:flex-col">
       <h1 className="font-notosans text-[16px] font-[400] text-secondary-grey-500 mb-[16px]">Layanan</h1>
       <ServiceTagSelector
         options={services}
@@ -542,7 +549,7 @@ export default function Home() {
         onChange={setSelectedServices}
       />
     </div>
-    <div className="flex flex-col">
+    <div className="lg:flex lg:flex-col lg:mt-0 mt-[24px]">
       <h1 className="font-notosans text-[16px] font-[400] text-secondary-grey-500 mb-[16px]">Ukuran perusahaan</h1>
       <CompanySizeSelector
         options={companySizes}
@@ -551,11 +558,13 @@ export default function Home() {
       />
     </div>
       </div>
+      <div className="lg:px-0 px-[24px]">
       <ContactForm />
+      </div>
     </div>
-    </section> */}
+    </section>
 
-    {/* <Footer /> */}
+    <Footer />
 
     </>
   );
