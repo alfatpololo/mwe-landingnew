@@ -1,8 +1,15 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const Features = ({ title, content, iconSrc }) => {
-  const [isOpen, setIsOpen] = useState(false);
+// Define the types for the props
+interface FeaturesProps {
+  title: string;
+  content: string;
+  iconSrc: string;
+}
+
+const Features: React.FC<FeaturesProps> = ({ title, content, iconSrc }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -14,11 +21,10 @@ const Features = ({ title, content, iconSrc }) => {
         {/* Icon/Image */}
         <div>
           <Image
-            className=""
             width={27}
             height={27}
             src={iconSrc}
-            alt=""
+            alt={title}
           />
         </div>
 
