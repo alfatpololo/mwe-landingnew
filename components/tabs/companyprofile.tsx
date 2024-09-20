@@ -4,10 +4,21 @@ export default function Companyprofile() {
     return (
 <section id="companyProfile">
   <div className="bg-tabs-002">
-    <div className="lg:container lg:mx-auto lg:justify-center lg:pt-[248px] w-full pt-[157px] pb-[77px] lg:pb-[168px]">
+    <div className="container mx-auto justify-center pt-[92px] lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
       <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[28px]">
-        {/* Gambar akan tetap di atas pada mobile, dan di kanan pada desktop */}
-        <div className="order-1 w-full lg:order-2">
+        
+        {/* Teks berada di sebelah kiri pada desktop dan di bawah gambar pada mobile */}
+        <div className="order-2 lg:order-1 w-full text-start lg:text-left pt-[40px] pb-[77px] lg:pt-0 lg:pb-0 lg:py-[80px]">
+          <h2 className="text-secondary-white text-[24px] lg:text-[32px] font-notosans font-[600] leading-[40px] lg:leading-[52px]">
+            Bangun Identitas Bisnismu Lebih Profesional dengan Website Andalan dari MakeWebEasy
+          </h2>
+          <p className="text-secondary-white text-[16px] lg:text-[18px] font-notosans font-[400] leading-[28px] lg:leading-[32px] mt-[16px]">
+            Tingkatkan Branding dan Citra Perusahaan yang Apik dengan Website <br /> Intuitif dan Menarik!
+          </p>
+        </div>
+
+        {/* Gambar berada di sebelah kanan pada desktop dan di atas teks pada mobile */}
+        <div className="order-1 lg:order-2 w-full">
           <div className="lg:flex lg:gap-[8px]">
             <div className="">
               <Image
@@ -56,15 +67,7 @@ export default function Companyprofile() {
             </div>
           </div>
         </div>
-        {/* Teks akan berada di bawah pada mobile, dan di kiri pada desktop */}
-        <div className="order-2 lg:order-1 w-full text-start lg:text-left pt-[40px] pb-[77px] lg:pt-0 lg:pb-0 lg:py-[80px]">
-          <h2 className="text-secondary-white text-[24px] lg:text-[32px] font-notosans font-[600] leading-[40px] lg:leading-[52px]">
-            Bangun Identitas Bisnismu Lebih Profesional dengan Website Andalan dari MakeWebEasy
-          </h2>
-          <p className="text-secondary-white text-[16px] lg:text-[18px] font-notosans font-[400] leading-[28px] lg:leading-[32px] mt-[16px]">
-            Tingkatkan Branding dan Citra Perusahaan yang Apik dengan Website <br /> Intuitif dan Menarik!
-          </p>
-        </div>
+
       </div>
     </div>
   </div>

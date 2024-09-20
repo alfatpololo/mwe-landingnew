@@ -4,12 +4,10 @@ export default function Customwebsite() {
     return (
         <section id="customWebsite">
             <div className="bg-tabs-003">
-                <div className="container mx-auto justify-center py-[64px] lg:py-[248px] mt-[192px]">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-[56px] mb-[28px]">
-
-                        {/* Images Section */}
-                        <div className="">
-          <div className="flex gap-[8px]">
+            <div className="container mx-auto justify-center pt-[92px] lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[28px]">
+        <div className="w-full">
+          <div className="lg:flex lg:gap-[8px]">
               <div className="">
               <Image
                     className="hidden lg:flex"

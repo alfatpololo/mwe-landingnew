@@ -5,7 +5,7 @@ export default function Ecommerce() {
     return (
         <section id="eCommerce">
       <div className="bg-tabs-001">
-    <div className="lg:container lg:mx-auto lg:justify-center lg:pt-[248px] w-full pt-[157px] pb-[77px] lg:pb-[168px]">
+    <div className="container mx-auto justify-center pt-[92px] lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
       <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[28px]">
         <div className="w-full">
           <div className="lg:flex lg:gap-[8px]">

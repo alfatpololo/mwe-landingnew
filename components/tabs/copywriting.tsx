@@ -4,7 +4,7 @@ export default function Copywriting() {
     return (
         <section id="copyWriting">
             <div className="bg-tabs-005">
-                <div className="container mx-auto justify-center py-[248px] mt-[192px]">
+                <div className="container mx-auto justify-center pt-[92px] lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] mb-[28px]">
                         <div className="order-2 lg:order-1 flex flex-col gap-[8px]">
                             <div className="flex flex-col lg:flex-row gap-[8px]">

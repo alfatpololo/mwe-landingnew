@@ -4,7 +4,7 @@ export default function Webdesign() {
   return (
     <section id="webDesign">
       <div className="bg-tabs-004">
-        <div className="container mx-auto justify-center py-[248px] mt-[192px]">
+        <div className="container mx-auto justify-center pt-[92px] lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] mb-[28px]">
             <div className="order-2 lg:order-1 w-full text-start lg:text-left pt-[40px] pb-[77px] lg:pt-0 lg:pb-0 lg:py-[80px]">
               <h2 className="text-secondary-white text-[24px] lg:text-[32px] font-notosans font-[600] leading-[40px] lg:leading-[52px]">
