@@ -16,3 +16,20 @@
     border: none !important;
     box-shadow: none !important;
 }
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling on body */
+  }
+  
+  main {
+    scroll-snap-type: y mandatory; /* Enable vertical snapping */
+    height: 100vh; /* Full height of viewport */
+    overflow-y: scroll; /* Enable scrolling within main */
+  }
+  
+  section {
+    scroll-snap-align: start; /* Snap at the start of each section */
+  }
+  

@@ -9,87 +9,104 @@ import SectionFive from "@/components/sections/sectionfive";
 import SectionSix from "@/components/sections/sectionsix";
 import Footer from "@/components/footer/footer";
 
+const sections = ["hero", "section-one", "section-two", "section-three", "section-four", "section-five", "section-six"];
+
 export default function Home() {
   const [navbarBg, setNavbarBg] = useState<string>("bg-transparent");
+  const [activeSection, setActiveSection] = useState<string>("hero");
 
   useEffect(() => {
+    const mainElement = document.querySelector("main");
+
     const handleScroll = () => {
+      const scrollPosition = mainElement?.scrollTop ?? 0;
       const sectionTwo = document.getElementById("section-two");
-      const scrollPosition = window.scrollY;
 
       if (sectionTwo) {
         const sectionTwoTop = sectionTwo.offsetTop;
 
         // Change navbar background when reaching section-two
-        if (scrollPosition >= sectionTwoTop - 50) {  // Adjust for small offset
-          setNavbarBg("bg-primary-blue"); // Make sure this class has proper background color
+        if (scrollPosition >= sectionTwoTop - 50) {
+          setNavbarBg("bg-primary-blue");
         } else {
           setNavbarBg("bg-transparent");
         }
       }
-    };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Fast and responsive section scroll snapping
-  useEffect(() => {
-    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
-
-    const sections = document.querySelectorAll("section");
-
-    const handleScroll = () => {
-      if (scrollTimeout) return;
-
-      scrollTimeout = setTimeout(() => {
-        scrollTimeout = null;
-
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-
-        // Find the current section based on scroll position
-        const currentSection = Array.from(sections).find((section) => {
-          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-          return (
-            scrollPosition >= sectionTop - windowHeight / 4 && 
-            scrollPosition < sectionTop + section.clientHeight - windowHeight / 4
-          );
-        });
-
-        if (currentSection) {
-          // Scroll to the current or next section faster
-          currentSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Active section detection
+      const currentSection = sections.find((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          return scrollPosition >= sectionTop - sectionHeight / 2 && scrollPosition < sectionTop + sectionHeight / 2;
         }
-      }, 100); // Faster timeout for more responsive scrolling
+        return false;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-
+    mainElement?.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeout) clearTimeout(scrollTimeout);
+      mainElement?.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <>
       <Navbar bgClass={navbarBg} />
-      <HeroSection />
-      <SectionOne />
-      <section id="section-two">
-        <SectionTwo />
-      </section>
-      <section id="section-three">
-        <SectionThree />
-      </section>
-      <SectionFour />
-      <SectionFive />
-      <SectionSix />
-      <Footer />
+      <main>
+        <section id="hero">
+          <HeroSection />
+        </section>
+        <section id="section-one">
+          <SectionOne />
+        </section>
+        <section id="section-two">
+          <SectionTwo />
+        </section>
+        <section id="section-three">
+          <SectionThree />
+        </section>
+        <section id="section-four">
+          <SectionFour />
+        </section>
+        <section id="section-five">
+          <SectionFive />
+        </section>
+        <section id="section-six">
+          <SectionSix />
+        </section>
+        <section>
+          <Footer />
+        </section>
+      </main>
+
+      {/* Dots Navigation */}
+      <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex-col space-y-[12px] hidden lg:flex">
+        {sections.map((id, index) => {
+          const isActive = activeSection === id;
+          const isInHeroOrSectionOne = (activeSection === "hero" || activeSection === "section-one");
+
+          return (
+            <div
+              key={index}
+              className={`cursor-pointer ${isActive ? 'relative w-[12px] h-[30px] rounded-lg bg-primary-blue' : (isInHeroOrSectionOne ? 'w-3 h-3 rounded-full bg-white' : 'w-3 h-3 rounded-full bg-gray-400')}`}
+              onClick={() => {
+                const section = document.getElementById(id);
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              {isActive && (
+                <div className="absolute inset-0 rounded-lg border-2 border-primary-blue" style={{ width: 'calc(100% + 8px)', height: 'calc(100% + 8px)', top: '-4px', left: '-4px' }} />
+              )}
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }
