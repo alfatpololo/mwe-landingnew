@@ -94,14 +94,14 @@ export default function Home() {
           return (
             <div
               key={index}
-              className={`cursor-pointer ${isActive ? 'relative w-[12px] h-[30px] rounded-lg bg-primary-blue' : (isInHeroOrSectionOne ? 'w-3 h-3 rounded-full bg-white' : 'w-3 h-3 rounded-full bg-gray-400')}`}
+              className={`cursor-pointer ${isActive ? 'relative w-[12px] h-[30px] rounded-[20px] bg-primary-blue' : (isInHeroOrSectionOne ? 'w-3 h-3 rounded-full bg-white' : 'w-3 h-3 rounded-full bg-gray-400')}`}
               onClick={() => {
                 const section = document.getElementById(id);
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               {isActive && (
-                <div className="absolute inset-0 rounded-lg border-2 border-primary-blue" style={{ width: 'calc(100% + 8px)', height: 'calc(100% + 8px)', top: '-4px', left: '-4px' }} />
+                <div className="absolute inset-0 rounded-[20px] border-2 border-primary-blue" style={{ width: 'calc(100% + 8px)', height: 'calc(100% + 8px)', top: '-4px', left: '-4px' }} />
               )}
             </div>
           );
