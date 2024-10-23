@@ -20,7 +20,7 @@ export default function SectionOne() {
   return (
     <>
      <section id="sectionone">
-      <div className="lg:mt-[192px]">
+      <div className="lg:mt-[192px] lg:w-full lg:h-full lg:py-[px]">
       <Tabbutton />
       </div>
     </section>

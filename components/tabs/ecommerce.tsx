@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Ecommerce() {
     return (
         <section id="eCommerce">
-      <div className="bg-tabs-001">
-    <div className="container mx-auto justify-center pt-[92px] lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
+      <div className="bg-tabs-001 lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
+    <div className="container mx-auto justify-center">
       <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[28px]">
         <div className="w-full">
           <div className="lg:flex lg:gap-[8px]">
