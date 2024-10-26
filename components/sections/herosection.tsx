@@ -21,10 +21,11 @@ export default function HeroSection() {
     <>
       <section
         id="hero"
-        className="lg:bg-bg-hero lg:w-full lg:h-full lg:py-[100px] bg-no-repeat lg:bg-cover bg-cover bg-bg-hero-mobile"
+        className="lg:bg-bg-hero lg:w-full lg:py-[100px] bg-no-repeat lg:bg-cover bg-cover bg-bg-hero-mobile"
         style={{
-          backgroundPosition: 'center bottom', // Position the background from the bottom, but also align it centrally
-          backgroundSize: 'cover', // Ensure the background covers the whole section
+          backgroundPosition: 'center bottom',
+          backgroundSize: 'cover',
+          minHeight: '100vh', // Ensures the hero section takes up the full viewport height
         }}
       >
         <div className="lg:container lg:mx-auto lg:justify-center relative overflow-hidden max-w-[1440px]">
@@ -78,7 +79,7 @@ export default function HeroSection() {
             </div>
 
             {/* Text Content */}
-            <div className="lg:w-full lg:pt-0 pt-[350px] pb-[47px] px-[24px] lg:px-0 lg:mt-0">
+            <div className="lg:w-full lg:pt-0 pt-[350px] pb-[47px] px-[24px] lg:px-0 lg:mt-0 lg:pb-[50px] xl:pb-[30px]"> {/* Adjust bottom padding for different breakpoints */}
               <h2 className="lg:text-secondary-white lg:text-[48px] font-notosans font-[600] lg:leading-[64px] text-secondary-black text-[26px] leading-[38px]">
                 Jasa Pembuatan <br /> Website E-Commerce <br /> Lengkap dan Company <br /> Profile Profesional
               </h2>
@@ -153,3 +154,4 @@ export default function HeroSection() {
     </>
   );
 }
+

@@ -20,12 +20,11 @@ export default function Home() {
 
     const handleScroll = () => {
       const scrollPosition = mainElement?.scrollTop ?? 0;
-      const sectionTwo = document.getElementById("section-two");
 
+      // Change navbar background when reaching section-two
+      const sectionTwo = document.getElementById("section-two");
       if (sectionTwo) {
         const sectionTwoTop = sectionTwo.offsetTop;
-
-        // Change navbar background when reaching section-two
         if (scrollPosition >= sectionTwoTop - 50) {
           setNavbarBg("bg-primary-blue");
         } else {
@@ -57,7 +56,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar bgClass={navbarBg} />
+      <Navbar bgClass={navbarBg} activeSection={activeSection} />
       <main>
         <section id="hero">
           <HeroSection />
