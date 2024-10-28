@@ -2,13 +2,11 @@ import Image from "next/image";
 
 export default function Companyprofile() {
     return (
-<section id="companyProfile">
-  <div className="bg-tabs-002">
-    <div className="container mx-auto justify-center pt-[92px] lg:h-full lg:py-[120px] mt-[40px] lg:pt-[92px]">
-      <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[28px]">
-        
-        {/* Teks berada di sebelah kiri pada desktop dan di bawah gambar pada mobile */}
-        <div className="order-2 lg:order-1 w-full text-start lg:text-left pt-[40px] pb-[77px] lg:pt-0 lg:pb-0 lg:py-[80px]">
+<section id="CompanyProfile" className="lg:h-full flex items-center justify-center">
+            <div className="bg-tabs-002 lg:h-full h-[95vh] flex flex-col justify-center w-full">
+                <div  className="container mx-auto flex flex-col items-center p-[24px] lg:pb-0 lg:pt-0">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[0]">
+        <div className="order-2 lg:order-2 w-full text-start lg:text-left pt-[40px] pb-[40px] lg:pt-0 lg:pb-[0] lg:pt-[80px]"> 
           <h2 className="text-secondary-white text-[24px] lg:text-[32px] font-notosans font-[600] leading-[40px] lg:leading-[52px]">
             Bangun Identitas Bisnismu Lebih Profesional dengan Website Andalan dari MakeWebEasy
           </h2>

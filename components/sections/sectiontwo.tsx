@@ -20,7 +20,7 @@ export default function SectionTwo() {
   return (
     <>
      <section id="sectiontwo">
-    <div className="container mx-auto justify-center lg:pt-[160px] lg:pb-[50px]">
+    <div className="container mx-auto h-screen justify-center lg:pt-[160px] lg:pb-[0px]">
       <div className="lg:grid lg:grid-cols-3 lg:gap-[24px] mb-[28px]">
         <div className="lg:w-[456px] px-[35px] lg:px-0">
             <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[36px] lg:leading-[52px]">Dilengkapi Semua Fitur yang Dibutuhkan Pada Website</h2>

@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Ecommerce() {
     return (
-        <section id="eCommerce" className="h-full lg:h-screen flex items-center justify-center"> {/* Centering horizontally and vertically */}
-            <div className="bg-tabs-001 lg:h-full lg:pt-[120px] w-full"> {/* Ensure full width */}
-                <div className="container mx-auto flex flex-col items-center pt-16 pb-10 lg:pb-0 lg:pt-0"> {/* Adjusted pb to reduce space at the bottom */}
+        <section id="Ecommerce" className="lg:h-full flex items-center justify-center">
+            <div className="bg-tabs-001 lg:h-full h-[95vh] flex flex-col justify-center w-full">
+                <div  className="container mx-auto flex flex-col items-center p-[24px] lg:pb-0 lg:pt-0"> {/* Adjusted pb to reduce space at the bottom */}
                     <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[0]">
                         <div className="w-full">
                             <div className="lg:flex lg:gap-[8px]">
