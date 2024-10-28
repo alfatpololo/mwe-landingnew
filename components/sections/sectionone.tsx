@@ -19,7 +19,12 @@ import PortfolioSlider from "@/components/slider/portfolioslider";
 export default function SectionOne() {
   return (
     <>
-     <section id="sectionone">
+     <section id="sectionone"
+     style={{
+      backgroundPosition: 'center bottom',
+      backgroundSize: 'cover',
+      minHeight: '100vh', // Ensures the hero section takes up the full viewport height
+    }}>
       <div className="lg:mt-[192px] lg:w-full lg:h-full lg:py-[px]">
       <Tabbutton />
       </div>
