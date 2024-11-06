@@ -21,65 +21,21 @@ export default function HeroSection() {
     <>
       <section
         id="hero"
-        className="lg:bg-bg-hero lg:w-full lg:py-[100px] bg-no-repeat lg:bg-cover bg-cover bg-bg-hero-mobile"
+        className="lg:bg-bg-hero relative lg:w-full lg:py-auto lg:justify-center lg:flex lg:flex-col bg-no-repeat lg:bg-cover bg-cover bg-bg-hero-mobile"
         style={{
           backgroundPosition: 'center bottom',
           backgroundSize: 'cover',
           minHeight: '100vh', // Ensures the hero section takes up the full viewport height
         }}
       >
-        <div className="lg:container lg:mx-auto lg:justify-center relative overflow-hidden max-w-[1440px]">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] mt-[40px]">
+        <div className="lg:justify-center">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:container lg:mx-auto">
 
             {/* Mobile Version */}
-            <div className="lg:hidden w-[390px] mx-auto relative">
-              <div className="flex">
-                <div className="absolute">
-                  <Image
-                    className="ms-[40px]"
-                    width={91}
-                    height={157}
-                    src="/s-side-seo.svg"
-                    alt=""
-                  />
-                  <Image
-                    className="ms-[35px]"
-                    width={76}
-                    height={100}
-                    src="/s-slide.svg"
-                    alt=""
-                  />
-                </div>
-                <div className="absolute right-[-130px] mt-[10px]">
-                  <Image
-                    className="ms-[20px]"
-                    width={128}
-                    height={26}
-                    src="/s-button-design.svg"
-                    alt=""
-                  />
-                  <Image
-                    className="lg:ms-[20px]"
-                    width={404}
-                    height={189}
-                    src="/s-dashboard.svg"
-                    alt=""
-                  />
-                  <div className="flex absolute mt-[-50px]">
-                    <Image
-                      className="ms-[5px]"
-                      width={217}
-                      height={123}
-                      src="/s-chart.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+
 
             {/* Text Content */}
-            <div className="lg:w-full lg:pt-0 pt-[350px] pb-[47px] px-[24px] lg:px-0 lg:mt-0 lg:pb-[50px] xl:pb-[30px]"> {/* Adjust bottom padding for different breakpoints */}
+            <div className="lg:w-full lg:pt-[180px] pt-[350px] pb-[47px] px-[24px] lg:px-0 lg:mt-0 lg:pb-[50px] xl:pb-[30px]"> {/* Adjust bottom padding for different breakpoints */}
               <h2 className="lg:text-secondary-white lg:text-[48px] font-notosans font-[600] lg:leading-[64px] text-secondary-black text-[26px] leading-[38px]">
                 Jasa Pembuatan <br /> Website E-Commerce <br /> Lengkap dan Company <br /> Profile Profesional
               </h2>
@@ -96,57 +52,22 @@ export default function HeroSection() {
             </div>
 
             {/* Desktop Version */}
-            <div className="w-full lg:ms-[-70px] hidden lg:block">
-              <div className="flex gap-[8px]">
-                <div>
-                  <Image
-                    className="lg:ms-[76px]"
-                    width={143}
-                    height={257}
-                    src="/side-seo.svg"
-                    alt=""
-                  />
-                  <Image
-                    className="lg:ms-[60px] mt-[32px]"
-                    width={128}
-                    height={168}
-                    src="/slide.svg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <Image
-                    className="lg:ms-[40px]"
-                    width={239}
-                    height={58}
-                    src="/button-design.svg"
-                    alt=""
-                  />
-                  <Image
-                    className="lg:ms-[20px]"
-                    width={701}
-                    height={337}
-                    src="/dashboard.svg"
-                    alt=""
-                  />
-                  <div className="flex absolute mt-[-50px] ms-[12px]">
+            
+
+          </div>
+          <div className="relative">
+            <div className="w-full hidden lg:block lg:absolute lg:top-[-600px] lg:left-0">
+                <div className="float-end">
+                  <div>
                     <Image
-                      className="ms-[20px]"
-                      width={358}
-                      height={198}
-                      src="/chart.svg"
-                      alt=""
-                    />
-                    <Image
-                      className="ms-[16px]"
-                      width={136}
-                      height={176}
-                      src="/color.svg"
+                      className=""
+                      width={837}
+                      height={554}
+                      src="/Image Banner.svg"
                       alt=""
                     />
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
