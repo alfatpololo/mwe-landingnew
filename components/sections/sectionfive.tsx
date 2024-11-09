@@ -19,8 +19,11 @@ import PortfolioSlider from "@/components/slider/portfolioslider";
 export default function SectionFive() {
   return (
     <>
-        <section className="lg:bg-bg-client lg:bg-auto lg:h-[800px] lg:pt-[120px] lg:bg-no-repeat pt-[125px] lg:bg-left-bottom" id="sectionfive">
-    <div className="container mx-auto justify-center px-[80]">
+        <section className="lg:bg-bg-client lg:bg-auto lg:bg-no-repeat lg:bg-left-bottom" id="sectionfive" >
+    <div className="container mx-auto justify-center flex flex-col"  style={{
+      backgroundSize: 'cover',
+      minHeight: '100vh', // Ensures the hero section takes up the full viewport height
+    }}>
       <div className="lg:grid lg:grid-cols-2 gap-[24px] mb-[28px]">
         <div className="lg:w-[456px] lg:px-0 px-[24px]">
             <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[52px]">Telah Dipercaya Oleh Lebih dari 5000+ Bisnis</h2>

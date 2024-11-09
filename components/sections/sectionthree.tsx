@@ -20,7 +20,11 @@ export default function SectionThree() {
   return (
     <>
      <section id="sectionthree">
-    <div className="container mx-auto justify-center lg:py-[120px]">
+     <div className="container mx-auto flex flex-col justify-center"
+     style={{
+      backgroundSize: 'cover',
+      minHeight: '100vh', // Ensures the hero section takes up the full viewport height
+    }}>
       <div className="grid grid-cols-1 gap-[24px] mb-[40px]">
         <div className="w-full">
             <h2 className="text-secondary-black text-center text-[32px] font-notosans font-[600] leading-[52px]">Kami Telah Membantu Transformasi Digital <br /> Melalui Website Untuk Banyak Perusahaan!</h2>

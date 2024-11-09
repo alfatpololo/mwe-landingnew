@@ -34,8 +34,12 @@ export default function SectionSix() {
       const services = ["Website E-Commerce", "Web Design", "Website Company Profile", "Website Custom"];
   return (
     <>
-        <section className="lg:pt-[50px] pt-[125px]" id="sectionsix">
-    <div className="container mx-auto justify-center lg:px-[80] lg:pt-[52px]">
+        <section id="sectionsix">
+        <div className="container mx-auto flex flex-col lg:pt-[200px] justify-center"
+     style={{
+      backgroundSize: 'cover',
+      minHeight: '100vh', // Ensures the hero section takes up the full viewport height
+    }}>
       <div className="flex mb-[56px]">
         <div className="lg:w-full lg:px-0 px-[24px]">
             <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[52px]">Hubungi MakeWebEasy Untuk Konsultasi Selengkapnya!</h2>

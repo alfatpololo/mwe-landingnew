@@ -20,7 +20,11 @@ export default function SectionTwo() {
   return (
     <>
      <section id="sectiontwo">
-    <div className="container mx-auto h-full py-[200px] justify-center">
+    <div className="container mx-auto flex flex-col justify-center"
+     style={{
+      backgroundSize: 'cover',
+      minHeight: '100vh', // Ensures the hero section takes up the full viewport height
+    }}>
       <div className="lg:grid lg:grid-cols-3 lg:gap-[24px] mb-[28px]">
         <div className="lg:w-[456px] px-[35px] lg:px-0">
             <h2 className="text-secondary-black text-[24px] lg:text-[32px] font-notosans font-[600] leading-[36px] lg:leading-[52px]">Dilengkapi Semua Fitur yang Dibutuhkan Pada Website</h2>
